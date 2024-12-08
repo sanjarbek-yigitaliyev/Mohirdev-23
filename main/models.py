@@ -60,6 +60,7 @@ class Xarid(models.Model):
     profil = models.ForeignKey(Profil, on_delete=models.CASCADE)
     sana = models.DateTimeField(auto_now_add=True)
     holat = models.CharField(max_length=50)
+    summasi=models.CharField(max_length=255)
 
     def __str__(self):
         return f"{self.profil} tomonidan xarid qilingan {self.kurs} ({self.holat})"
